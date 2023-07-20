@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a477bd3ea7c189758522965eb6c9e523 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a477bd3ea7c189758522965eb6c9e523" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a477bd3ea7c189758522965eb6c9e523 = L.map(
+                "map_a477bd3ea7c189758522965eb6c9e523",
+                {
+                    center: [50.0755, 14.4378],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_156bac4eb2b705ab3365226f7f2434e0 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+            var heat_map_b3375adccb77cf04b78650fd2800e135 = L.heatLayer(
+                [[50.06938, 14.48372, 250.0], [50.10134, 14.48979, 261.9047619047619], [50.10386, 14.47736, 245.6140350877193], [50.04096, 14.39206, 288.8888888888889], [50.02908, 14.52788, 395.3488372093023], [50.05582, 14.49291, 324.3243243243243], [50.06376, 14.30845, 318.1818181818182], [50.02978, 14.44976, 418.5185185185185], [50.06275, 14.44691, 254.54545454545453], [50.06829, 14.4342, 303.921568627451], [50.08944, 14.48277, 257.89473684210526], [50.05706, 14.46998, 337.8378378378378], [50.11288, 14.47495, 219.04761904761904], [50.12468, 14.48231, 293.3333333333333], [50.127, 14.57074, 266.6666666666667], [50.03472, 14.50018, 310.3448275862069], [50.09817, 14.3708, 226.1904761904762], [50.06067, 14.43501, 255.31914893617025], [50.08486, 14.37363, 277.3095238095238], [50.08583, 14.38262, 387.5], [49.97415, 14.39539, 272.72727272727275], [50.13964, 14.43055, 316.6666666666667], [49.98653, 14.35817, 312.5], [50.1048, 14.47937, 306.1224489795918], [50.10533, 14.50202, 484.8484848484849], [50.04957, 14.46726, 309.5238095238095], [50.02082, 14.40306, 393.93939393939394], [50.13068, 14.43328, 292.6829268292683], [50.12203, 14.49951, 333.3333333333333], [50.0732, 14.54765, 308.51063829787233], [50.11626, 14.62081, 321.42857142857144], [50.02954, 14.59678, 419.35483870967744], [50.07214, 14.4372, 330.0], [50.10631, 14.55386, 355.2631578947368], [50.1559, 14.51602, 341.4634146341463], [50.13111, 14.4717, 372.09302325581393], [50.04245, 14.55154, 309.5238095238095], [50.10933, 14.39949, 320.5128205128205], [50.06833, 14.49217, 312.5], [50.0344, 14.41857, 362.5], [50.06933, 14.44935, 306.1224489795918], [50.05776, 14.289, 420.0], [50.08259, 14.44762, 260.0], [50.00996, 14.40405, 265.9574468085106], [50.08179, 14.41323, 6.166666666666667], [50.07857, 14.2534, 180.0], [50.10432, 14.452, 276.9230769230769], [50.12698, 14.50312, 296.2962962962963], [49.95494, 14.48187, 225.80645161290323], [50.08504, 14.5135, 312.5], [50.08963, 14.44489, 352.0], [50.09208, 14.43036, 301.0416666666667], [49.99159, 14.6653, 181.8181818181818], [50.1264, 14.42052, 304.3478260869565], [50.07576, 14.65364, 242.8571428571429], [50.02104, 14.51982, 264.44444444444446], [50.06367, 14.36827, 277.77777777777777], [50.0571, 14.48411, 300.0], [50.08456, 14.44802, 300.0], [50.03492, 14.32108, 314.2857142857143], [50.0685, 14.3879, 300.0], [50.04423, 14.40009, 258.92857142857144], [50.04747, 14.52054, 396.5517241379311], [50.05185, 14.34899, 325.5813953488372], [50.03952, 14.33978, 311.1111111111111], [50.06673, 14.39622, 279.4117647058824], [50.06394, 14.64603, 236.3636363636364]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+            var marker_47c5f0ffc6acc326218b3082bd4014eb = L.marker(
+                [50.06938, 14.48372],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_3b7e764c8d807112d1d32ebd24091203 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_f5f1c274d302d77f1d1a994d6d77421c = $(`<div id="html_f5f1c274d302d77f1d1a994d6d77421c" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/791884-nabidka-pronajem-bytu-u-hranic-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_3b7e764c8d807112d1d32ebd24091203.setContent(html_f5f1c274d302d77f1d1a994d6d77421c);
+            
+        
+
+        marker_47c5f0ffc6acc326218b3082bd4014eb.bindPopup(popup_3b7e764c8d807112d1d32ebd24091203)
+        ;
+
+        
+    
+    
+            var marker_7479fb31a15e4b4d46c58b789e80601a = L.marker(
+                [50.10134, 14.48979],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_7d6b7c41cb6708677444aeddf8723a68 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_469d6f02f8636f04ef728fb0e07c0130 = $(`<div id="html_469d6f02f8636f04ef728fb0e07c0130" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/779448-nabidka-pronajem-bytu-spojovaci-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_7d6b7c41cb6708677444aeddf8723a68.setContent(html_469d6f02f8636f04ef728fb0e07c0130);
+            
+        
+
+        marker_7479fb31a15e4b4d46c58b789e80601a.bindPopup(popup_7d6b7c41cb6708677444aeddf8723a68)
+        ;
+
+        
+    
+    
+            var marker_ed4fa5c57955a6451790ac52a41d7567 = L.marker(
+                [50.10386, 14.47736],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_f459aacd916eb1930cf342819f5967df = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_d670d5388b103d19eddbda3180d63699 = $(`<div id="html_d670d5388b103d19eddbda3180d63699" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/791838-nabidka-pronajem-bytu-vacinova-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_f459aacd916eb1930cf342819f5967df.setContent(html_d670d5388b103d19eddbda3180d63699);
+            
+        
+
+        marker_ed4fa5c57955a6451790ac52a41d7567.bindPopup(popup_f459aacd916eb1930cf342819f5967df)
+        ;
+
+        
+    
+    
+            var marker_ac4695bcfa27b3b7f6e2004dbd42a8b8 = L.marker(
+                [50.04096, 14.39206],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_11cc878ba42ec1c2798530767eda610c = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_c4ff1d06320c34cbadc7c600558fccab = $(`<div id="html_c4ff1d06320c34cbadc7c600558fccab" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/507089-nabidka-pronajem-bytu-slivenecka' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_11cc878ba42ec1c2798530767eda610c.setContent(html_c4ff1d06320c34cbadc7c600558fccab);
+            
+        
+
+        marker_ac4695bcfa27b3b7f6e2004dbd42a8b8.bindPopup(popup_11cc878ba42ec1c2798530767eda610c)
+        ;
+
+        
+    
+    
+            var marker_98cf5fb69120152a3f94bd769c766986 = L.marker(
+                [50.02908, 14.52788],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_632f4b7941d5747bd0d42842e0b66fbe = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_226daaa9558462dd983e31eec8b6b643 = $(`<div id="html_226daaa9558462dd983e31eec8b6b643" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/791793-nabidka-pronajem-bytu-tatarkova-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_632f4b7941d5747bd0d42842e0b66fbe.setContent(html_226daaa9558462dd983e31eec8b6b643);
+            
+        
+
+        marker_98cf5fb69120152a3f94bd769c766986.bindPopup(popup_632f4b7941d5747bd0d42842e0b66fbe)
+        ;
+
+        
+    
+    
+            var marker_4e44ba63bcd73bedae45fe7a8eec8418 = L.marker(
+                [50.05582, 14.49291],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_0c541641fcf9671aa02dbf4ca12a73cf = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_3fbb2e36286100b2eadeb5656ea86f19 = $(`<div id="html_3fbb2e36286100b2eadeb5656ea86f19" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/783090-nabidka-pronajem-bytu-na-slatince-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_0c541641fcf9671aa02dbf4ca12a73cf.setContent(html_3fbb2e36286100b2eadeb5656ea86f19);
+            
+        
+
+        marker_4e44ba63bcd73bedae45fe7a8eec8418.bindPopup(popup_0c541641fcf9671aa02dbf4ca12a73cf)
+        ;
+
+        
+    
+    
+            var marker_012439d491e8ee6faa5267e823e7c539 = L.marker(
+                [50.06376, 14.30845],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_c6fe48ab32cc5cf3d1840a158cfa3fdc = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_0ba91a4000370890e87ffcd8a3c242de = $(`<div id="html_0ba91a4000370890e87ffcd8a3c242de" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/407918-nabidka-pronajem-bytu-jirankova-praha-17' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_c6fe48ab32cc5cf3d1840a158cfa3fdc.setContent(html_0ba91a4000370890e87ffcd8a3c242de);
+            
+        
+
+        marker_012439d491e8ee6faa5267e823e7c539.bindPopup(popup_c6fe48ab32cc5cf3d1840a158cfa3fdc)
+        ;
+
+        
+    
+    
+            var marker_3558395dddd3f53ab136e174fca99d6d = L.marker(
+                [50.02978, 14.44976],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_c816b6d7e9ee9c763b577d508cb32223 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_00241cd399293c55ab20535d9c2444e0 = $(`<div id="html_00241cd399293c55ab20535d9c2444e0" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/782680-nabidka-pronajem-bytu-sturova-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_c816b6d7e9ee9c763b577d508cb32223.setContent(html_00241cd399293c55ab20535d9c2444e0);
+            
+        
+
+        marker_3558395dddd3f53ab136e174fca99d6d.bindPopup(popup_c816b6d7e9ee9c763b577d508cb32223)
+        ;
+
+        
+    
+    
+            var marker_071b338bb10cda0a44891764325041e7 = L.marker(
+                [50.06275, 14.44691],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_e3c0b248720d14b0751791486713e11b = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_137df07eaef988b3ae74e8945372fe4d = $(`<div id="html_137df07eaef988b3ae74e8945372fe4d" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/791725-nabidka-pronajem-bytu-druzstevni-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_e3c0b248720d14b0751791486713e11b.setContent(html_137df07eaef988b3ae74e8945372fe4d);
+            
+        
+
+        marker_071b338bb10cda0a44891764325041e7.bindPopup(popup_e3c0b248720d14b0751791486713e11b)
+        ;
+
+        
+    
+    
+            var marker_85086e0b3c5061e394866523b73050dc = L.marker(
+                [50.06829, 14.4342],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_1b8afee0fba28151d6468f72ed22f8ce = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_48adc3468e4ea45f6150f31093a3f3c6 = $(`<div id="html_48adc3468e4ea45f6150f31093a3f3c6" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/785066-nabidka-pronajem-bytu-belehradska-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_1b8afee0fba28151d6468f72ed22f8ce.setContent(html_48adc3468e4ea45f6150f31093a3f3c6);
+            
+        
+
+        marker_85086e0b3c5061e394866523b73050dc.bindPopup(popup_1b8afee0fba28151d6468f72ed22f8ce)
+        ;
+
+        
+    
+    
+            var marker_40aae13f5e3cb873d68606c1c67349a8 = L.marker(
+                [50.08944, 14.48277],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_15d7b0673b9815360b3cf67200b84a4f = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_903ef8e2b715e5a3986de23aaebad0f8 = $(`<div id="html_903ef8e2b715e5a3986de23aaebad0f8" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/791645-nabidka-pronajem-bytu-rixdorfska-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_15d7b0673b9815360b3cf67200b84a4f.setContent(html_903ef8e2b715e5a3986de23aaebad0f8);
+            
+        
+
+        marker_40aae13f5e3cb873d68606c1c67349a8.bindPopup(popup_15d7b0673b9815360b3cf67200b84a4f)
+        ;
+
+        
+    
+    
+            var marker_c885191faf0b9f9c9f281d588cc767e1 = L.marker(
+                [50.05706, 14.46998],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_d0a8521f79525a78e85d9ab20038b0b5 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_0aa2d6d1d8cc2adba1a05148a0d2a2bf = $(`<div id="html_0aa2d6d1d8cc2adba1a05148a0d2a2bf" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/789933-nabidka-pronajem-bytu-u-plynarny-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_d0a8521f79525a78e85d9ab20038b0b5.setContent(html_0aa2d6d1d8cc2adba1a05148a0d2a2bf);
+            
+        
+
+        marker_c885191faf0b9f9c9f281d588cc767e1.bindPopup(popup_d0a8521f79525a78e85d9ab20038b0b5)
+        ;
+
+        
+    
+    
+            var marker_c6c68e4f4c5cb40a87dbd6273a21c3ea = L.marker(
+                [50.11288, 14.47495],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_1947c19da27cae9047203137c46225bd = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_b753e66a41aa13ec9ebc6545d49bfead = $(`<div id="html_b753e66a41aa13ec9ebc6545d49bfead" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/605573-nabidka-pronajem-bytu-braunerova-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_1947c19da27cae9047203137c46225bd.setContent(html_b753e66a41aa13ec9ebc6545d49bfead);
+            
+        
+
+        marker_c6c68e4f4c5cb40a87dbd6273a21c3ea.bindPopup(popup_1947c19da27cae9047203137c46225bd)
+        ;
+
+        
+    
+    
+            var marker_c7384bb2a3399661d2d73df725063e68 = L.marker(
+                [50.12468, 14.48231],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_5e344952624458283f326d0f10366f6e = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_e30108d36f442033094b54e017ef7380 = $(`<div id="html_e30108d36f442033094b54e017ef7380" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/790015-nabidka-pronajem-bytu-decinska-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_5e344952624458283f326d0f10366f6e.setContent(html_e30108d36f442033094b54e017ef7380);
+            
+        
+
+        marker_c7384bb2a3399661d2d73df725063e68.bindPopup(popup_5e344952624458283f326d0f10366f6e)
+        ;
+
+        
+    
+    
+            var marker_5008adb0c0f187ad375c3dbe3def8a08 = L.marker(
+                [50.127, 14.57074],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_2e998338e574372d100ddf945a6ed015 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_4b5e3b0bab9a11bf009f478d460034f6 = $(`<div id="html_4b5e3b0bab9a11bf009f478d460034f6" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/202624-nabidka-pronajem-bytu-drahelicka' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_2e998338e574372d100ddf945a6ed015.setContent(html_4b5e3b0bab9a11bf009f478d460034f6);
+            
+        
+
+        marker_5008adb0c0f187ad375c3dbe3def8a08.bindPopup(popup_2e998338e574372d100ddf945a6ed015)
+        ;
+
+        
+    
+    
+            var marker_e3570914851f3acd5fdf5c55a9bfc73b = L.marker(
+                [50.03472, 14.50018],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_412ed4588af7b3aefbc02b183f2f2190 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_dd3a4bafd51e1613b852da41cd24be32 = $(`<div id="html_dd3a4bafd51e1613b852da41cd24be32" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/791626-nabidka-pronajem-bytu-ledvinova-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_412ed4588af7b3aefbc02b183f2f2190.setContent(html_dd3a4bafd51e1613b852da41cd24be32);
+            
+        
+
+        marker_e3570914851f3acd5fdf5c55a9bfc73b.bindPopup(popup_412ed4588af7b3aefbc02b183f2f2190)
+        ;
+
+        
+    
+    
+            var marker_ac4fc4b276c2825a5e0c3eb763fe3e68 = L.marker(
+                [50.09817, 14.3708],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_36e9a88794b4f36cca5869d14a7ae44d = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_80649bfbf2bfc6648d10d526794d8cca = $(`<div id="html_80649bfbf2bfc6648d10d526794d8cca" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/90730-nabidka-pronajem-bytu-zavadilova-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_36e9a88794b4f36cca5869d14a7ae44d.setContent(html_80649bfbf2bfc6648d10d526794d8cca);
+            
+        
+
+        marker_ac4fc4b276c2825a5e0c3eb763fe3e68.bindPopup(popup_36e9a88794b4f36cca5869d14a7ae44d)
+        ;
+
+        
+    
+    
+            var marker_30fd3582d00521cec8319077bf820b1a = L.marker(
+                [50.06067, 14.43501],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_1bf62df4ce1483ddafeda219bc1079bf = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_8c529278197be6ae3fe475b915ce2f86 = $(`<div id="html_8c529278197be6ae3fe475b915ce2f86" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/791619-nabidka-pronajem-bytu-zateckych-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_1bf62df4ce1483ddafeda219bc1079bf.setContent(html_8c529278197be6ae3fe475b915ce2f86);
+            
+        
+
+        marker_30fd3582d00521cec8319077bf820b1a.bindPopup(popup_1bf62df4ce1483ddafeda219bc1079bf)
+        ;
+
+        
+    
+    
+            var marker_805d21fd614befe94debeac4e7e9956e = L.marker(
+                [50.08486, 14.37363],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_2a8790c2bd1b2deb322a53c4e03bb4db = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_d131a118a1f4b55510ddd2219b9f9254 = $(`<div id="html_d131a118a1f4b55510ddd2219b9f9254" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/789111-nabidka-pronajem-bytu-pod-marjankou-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_2a8790c2bd1b2deb322a53c4e03bb4db.setContent(html_d131a118a1f4b55510ddd2219b9f9254);
+            
+        
+
+        marker_805d21fd614befe94debeac4e7e9956e.bindPopup(popup_2a8790c2bd1b2deb322a53c4e03bb4db)
+        ;
+
+        
+    
+    
+            var marker_a0cbcaa5e4501512eb32208ff840d7e8 = L.marker(
+                [50.08583, 14.38262],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_2f0aed910d607276046674575e73008a = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_f75e282ff18e7e708e59bfd315bd4287 = $(`<div id="html_f75e282ff18e7e708e59bfd315bd4287" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/791585-nabidka-pronajem-bytu-belohorska-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_2f0aed910d607276046674575e73008a.setContent(html_f75e282ff18e7e708e59bfd315bd4287);
+            
+        
+
+        marker_a0cbcaa5e4501512eb32208ff840d7e8.bindPopup(popup_2f0aed910d607276046674575e73008a)
+        ;
+
+        
+    
+    
+            var marker_dd9aadd8fd3136286d4d8e21c077eaec = L.marker(
+                [49.97415, 14.39539],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_222db015f5cfc621b90adec0c2743e2f = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_7e30485d45399a96d4a1e6be10d86783 = $(`<div id="html_7e30485d45399a96d4a1e6be10d86783" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/574420-nabidka-pronajem-bytu-zitavskeho-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_222db015f5cfc621b90adec0c2743e2f.setContent(html_7e30485d45399a96d4a1e6be10d86783);
+            
+        
+
+        marker_dd9aadd8fd3136286d4d8e21c077eaec.bindPopup(popup_222db015f5cfc621b90adec0c2743e2f)
+        ;
+
+        
+    
+    
+            var marker_0ca23d9813f0313ecc2cbf7ab37f8ea3 = L.marker(
+                [50.13964, 14.43055],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_d3971c7ae1d8a01f7ad958013e9b1756 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_9e9d4499aab2a4759025bce6d1f6a9d6 = $(`<div id="html_9e9d4499aab2a4759025bce6d1f6a9d6" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/790656-nabidka-pronajem-bytu-cimicka-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_d3971c7ae1d8a01f7ad958013e9b1756.setContent(html_9e9d4499aab2a4759025bce6d1f6a9d6);
+            
+        
+
+        marker_0ca23d9813f0313ecc2cbf7ab37f8ea3.bindPopup(popup_d3971c7ae1d8a01f7ad958013e9b1756)
+        ;
+
+        
+    
+    
+            var marker_2ddb517a19d478f7c8bc64a67a1ed71c = L.marker(
+                [49.98653, 14.35817],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_3f0fb43c954d59016c3b8b3cc5cedfdf = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_98ea11e8f083e037d44bc1e4b7e37a9c = $(`<div id="html_98ea11e8f083e037d44bc1e4b7e37a9c" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/787130-nabidka-pronajem-bytu-slinkova-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_3f0fb43c954d59016c3b8b3cc5cedfdf.setContent(html_98ea11e8f083e037d44bc1e4b7e37a9c);
+            
+        
+
+        marker_2ddb517a19d478f7c8bc64a67a1ed71c.bindPopup(popup_3f0fb43c954d59016c3b8b3cc5cedfdf)
+        ;
+
+        
+    
+    
+            var marker_3be1276a1a6e08e9f85c172ba9d41935 = L.marker(
+                [50.1048, 14.47937],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_078e42ddfd12bc0e886de79ce5de973b = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_d15f7d10cb33b4bb68dd2f958b8fa229 = $(`<div id="html_d15f7d10cb33b4bb68dd2f958b8fa229" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/790955-nabidka-pronajem-bytu-novakovych-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_078e42ddfd12bc0e886de79ce5de973b.setContent(html_d15f7d10cb33b4bb68dd2f958b8fa229);
+            
+        
+
+        marker_3be1276a1a6e08e9f85c172ba9d41935.bindPopup(popup_078e42ddfd12bc0e886de79ce5de973b)
+        ;
+
+        
+    
+    
+            var marker_0ad6a7c680fcb414e967c3049ed4bc8b = L.marker(
+                [50.10533, 14.50202],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_e90b486aff63abe5a903717ab68f9a63 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_9e56e943ca136ac592e9ceae43af8fed = $(`<div id="html_9e56e943ca136ac592e9ceae43af8fed" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/791263-nabidka-pronajem-bytu-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_e90b486aff63abe5a903717ab68f9a63.setContent(html_9e56e943ca136ac592e9ceae43af8fed);
+            
+        
+
+        marker_0ad6a7c680fcb414e967c3049ed4bc8b.bindPopup(popup_e90b486aff63abe5a903717ab68f9a63)
+        ;
+
+        
+    
+    
+            var marker_da3d0e42dc4617b821505c0a4b345f76 = L.marker(
+                [50.04957, 14.46726],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_c5d7e409ea15b77b002a63acc8388869 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_bb5259cf4270d8c6c47137fea0a2e758 = $(`<div id="html_bb5259cf4270d8c6c47137fea0a2e758" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/538966-nabidka-pronajem-bytu-v-zapoli-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_c5d7e409ea15b77b002a63acc8388869.setContent(html_bb5259cf4270d8c6c47137fea0a2e758);
+            
+        
+
+        marker_da3d0e42dc4617b821505c0a4b345f76.bindPopup(popup_c5d7e409ea15b77b002a63acc8388869)
+        ;
+
+        
+    
+    
+            var marker_f971bf62e5c32e2216e60307b4ba85f0 = L.marker(
+                [50.02082, 14.40306],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_621d8507cfd079aa5b138044065ff239 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_bf7062f9caa17c646bf0a9dfe6e287cc = $(`<div id="html_bf7062f9caa17c646bf0a9dfe6e287cc" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/650716-nabidka-pronajem-bytu-sifarska-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_621d8507cfd079aa5b138044065ff239.setContent(html_bf7062f9caa17c646bf0a9dfe6e287cc);
+            
+        
+
+        marker_f971bf62e5c32e2216e60307b4ba85f0.bindPopup(popup_621d8507cfd079aa5b138044065ff239)
+        ;
+
+        
+    
+    
+            var marker_1ab4bbebd1441d1088b1c9c89a5672da = L.marker(
+                [50.13068, 14.43328],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_bc442a90ed76aa4e083f7b70e0dc359a = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_11d10ec32bfa3f01508df985bd82d308 = $(`<div id="html_11d10ec32bfa3f01508df985bd82d308" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/791184-nabidka-pronajem-bytu-bukolska-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_bc442a90ed76aa4e083f7b70e0dc359a.setContent(html_11d10ec32bfa3f01508df985bd82d308);
+            
+        
+
+        marker_1ab4bbebd1441d1088b1c9c89a5672da.bindPopup(popup_bc442a90ed76aa4e083f7b70e0dc359a)
+        ;
+
+        
+    
+    
+            var marker_458d05df35938c5b896d0a5c0808ffd0 = L.marker(
+                [50.12203, 14.49951],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_27a141f6e599968841ca6833e7ea5404 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_cbdbfc0fe6ca0bb246fc182efcc32b06 = $(`<div id="html_cbdbfc0fe6ca0bb246fc182efcc32b06" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/598156-nabidka-pronajem-bytu-jablonecka-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_27a141f6e599968841ca6833e7ea5404.setContent(html_cbdbfc0fe6ca0bb246fc182efcc32b06);
+            
+        
+
+        marker_458d05df35938c5b896d0a5c0808ffd0.bindPopup(popup_27a141f6e599968841ca6833e7ea5404)
+        ;
+
+        
+    
+    
+            var marker_feb1b2e0aa9be8109b4a026059e7513d = L.marker(
+                [50.0732, 14.54765],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_54fc9fb098b6d50d542897a1cf71cfd6 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_030d322db4b1b0eedd4694a7402da4bc = $(`<div id="html_030d322db4b1b0eedd4694a7402da4bc" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/790952-nabidka-pronajem-bytu-andersenova-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_54fc9fb098b6d50d542897a1cf71cfd6.setContent(html_030d322db4b1b0eedd4694a7402da4bc);
+            
+        
+
+        marker_feb1b2e0aa9be8109b4a026059e7513d.bindPopup(popup_54fc9fb098b6d50d542897a1cf71cfd6)
+        ;
+
+        
+    
+    
+            var marker_87dd7b6d9e67fff78a81a9a5fbaf88d5 = L.marker(
+                [50.11626, 14.62081],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_b5a8aaa53e113870a742dad6bfca27a3 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_be7573afa3157057adb031b630978878 = $(`<div id="html_be7573afa3157057adb031b630978878" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/697759-nabidka-pronajem-bytu-nachodska-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_b5a8aaa53e113870a742dad6bfca27a3.setContent(html_be7573afa3157057adb031b630978878);
+            
+        
+
+        marker_87dd7b6d9e67fff78a81a9a5fbaf88d5.bindPopup(popup_b5a8aaa53e113870a742dad6bfca27a3)
+        ;
+
+        
+    
+    
+            var marker_8c2e92cfdc173f877bdfadc7a9eeec8e = L.marker(
+                [50.02954, 14.59678],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_e82bafaf10c8cd2747f24838c2b6a733 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_84cd06f97e49c97350a033b355449999 = $(`<div id="html_84cd06f97e49c97350a033b355449999" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/587714-nabidka-pronajem-bytu-oty-bubenicka-praha-22' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_e82bafaf10c8cd2747f24838c2b6a733.setContent(html_84cd06f97e49c97350a033b355449999);
+            
+        
+
+        marker_8c2e92cfdc173f877bdfadc7a9eeec8e.bindPopup(popup_e82bafaf10c8cd2747f24838c2b6a733)
+        ;
+
+        
+    
+    
+            var marker_21109a65f9a666cbc70e9ac87039d214 = L.marker(
+                [50.07214, 14.4372],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_ff46abc07142733719574d9060bce749 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_d23bf3c4340a7a0057c357fe6364daab = $(`<div id="html_d23bf3c4340a7a0057c357fe6364daab" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/358500-nabidka-pronajem-bytu-zahrebska-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_ff46abc07142733719574d9060bce749.setContent(html_d23bf3c4340a7a0057c357fe6364daab);
+            
+        
+
+        marker_21109a65f9a666cbc70e9ac87039d214.bindPopup(popup_ff46abc07142733719574d9060bce749)
+        ;
+
+        
+    
+    
+            var marker_7657b8136ea6fcdba5897b64a9cb67d6 = L.marker(
+                [50.10631, 14.55386],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_b6831e76f6b2d3807e915a21e8813d84 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_57cf2c5b9d0dd8c84c99e23a8c44136c = $(`<div id="html_57cf2c5b9d0dd8c84c99e23a8c44136c" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/709424-nabidka-pronajem-bytu-kukelska-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_b6831e76f6b2d3807e915a21e8813d84.setContent(html_57cf2c5b9d0dd8c84c99e23a8c44136c);
+            
+        
+
+        marker_7657b8136ea6fcdba5897b64a9cb67d6.bindPopup(popup_b6831e76f6b2d3807e915a21e8813d84)
+        ;
+
+        
+    
+    
+            var marker_712e4f6ed5577161d3081a335b81b9e5 = L.marker(
+                [50.1559, 14.51602],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_94f2fe498334c3cb7ce87199620439e3 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_aadbed0274c48d73994940ed4116206c = $(`<div id="html_aadbed0274c48d73994940ed4116206c" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/770378-nabidka-pronajem-bytu-bermanova-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_94f2fe498334c3cb7ce87199620439e3.setContent(html_aadbed0274c48d73994940ed4116206c);
+            
+        
+
+        marker_712e4f6ed5577161d3081a335b81b9e5.bindPopup(popup_94f2fe498334c3cb7ce87199620439e3)
+        ;
+
+        
+    
+    
+            var marker_2b42dc4e6a98e861a188a5fac2735c06 = L.marker(
+                [50.13111, 14.4717],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_30fe62d8feabe51f6f7dc37560cf0ea0 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_0cd01dc0ce5221144998061164115424 = $(`<div id="html_0cd01dc0ce5221144998061164115424" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/786967-nabidka-pronajem-bytu-famfulikova-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_30fe62d8feabe51f6f7dc37560cf0ea0.setContent(html_0cd01dc0ce5221144998061164115424);
+            
+        
+
+        marker_2b42dc4e6a98e861a188a5fac2735c06.bindPopup(popup_30fe62d8feabe51f6f7dc37560cf0ea0)
+        ;
+
+        
+    
+    
+            var marker_bb01eee64d6777efee530e0a72774126 = L.marker(
+                [50.04245, 14.55154],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_a1051d2657d4fdc46c3c276b22ed5035 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_d62ed0da7d6864dd39437b697bc23e0d = $(`<div id="html_d62ed0da7d6864dd39437b697bc23e0d" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/789179-nabidka-pronajem-bytu-nad-prehradou-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_a1051d2657d4fdc46c3c276b22ed5035.setContent(html_d62ed0da7d6864dd39437b697bc23e0d);
+            
+        
+
+        marker_bb01eee64d6777efee530e0a72774126.bindPopup(popup_a1051d2657d4fdc46c3c276b22ed5035)
+        ;
+
+        
+    
+    
+            var marker_e6e82058d6ec4e5e439ac16cc19a4ae0 = L.marker(
+                [50.10933, 14.39949],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_a680af0472bca898036d4064c95cf331 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_ab43c581afb7ff357eb259fcd15a36ee = $(`<div id="html_ab43c581afb7ff357eb259fcd15a36ee" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/788611-nabidka-pronajem-bytu-ve-struhach-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_a680af0472bca898036d4064c95cf331.setContent(html_ab43c581afb7ff357eb259fcd15a36ee);
+            
+        
+
+        marker_e6e82058d6ec4e5e439ac16cc19a4ae0.bindPopup(popup_a680af0472bca898036d4064c95cf331)
+        ;
+
+        
+    
+    
+            var marker_c5d5ab35ceddf60d22376728ae628232 = L.marker(
+                [50.06833, 14.49217],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_45e2ae4f80c11070b19d7a1f992219cd = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_d4fb45252c337569c6f954d872f3744d = $(`<div id="html_d4fb45252c337569c6f954d872f3744d" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/771827-nabidka-pronajem-bytu-cestlicka-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_45e2ae4f80c11070b19d7a1f992219cd.setContent(html_d4fb45252c337569c6f954d872f3744d);
+            
+        
+
+        marker_c5d5ab35ceddf60d22376728ae628232.bindPopup(popup_45e2ae4f80c11070b19d7a1f992219cd)
+        ;
+
+        
+    
+    
+            var marker_e9b7ee6955f9df5eea3f86243c0535e6 = L.marker(
+                [50.0344, 14.41857],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_627ded1d50cb5a26f4fa51b126653791 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_3dc4d5bde5b95e7f863be73cef2a5303 = $(`<div id="html_3dc4d5bde5b95e7f863be73cef2a5303" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/652551-nabidka-pronajem-bytu-branicka-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_627ded1d50cb5a26f4fa51b126653791.setContent(html_3dc4d5bde5b95e7f863be73cef2a5303);
+            
+        
+
+        marker_e9b7ee6955f9df5eea3f86243c0535e6.bindPopup(popup_627ded1d50cb5a26f4fa51b126653791)
+        ;
+
+        
+    
+    
+            var marker_8a8134a5af0840459d30633c773c1cd5 = L.marker(
+                [50.06933, 14.44935],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_69c787c73b6604b13d14ef2d1f382e30 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_017357d338d1590388ebf342126390d3 = $(`<div id="html_017357d338d1590388ebf342126390d3" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/620666-nabidka-pronajem-bytu-kosicka-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_69c787c73b6604b13d14ef2d1f382e30.setContent(html_017357d338d1590388ebf342126390d3);
+            
+        
+
+        marker_8a8134a5af0840459d30633c773c1cd5.bindPopup(popup_69c787c73b6604b13d14ef2d1f382e30)
+        ;
+
+        
+    
+    
+            var marker_baaafed6bd8346b991ceae44cb067277 = L.marker(
+                [50.05776, 14.289],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_59bf4c5214afc71b63141c7d40510172 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_9fcced933d2244391bfde9fef977602c = $(`<div id="html_9fcced933d2244391bfde9fef977602c" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/529640-nabidka-pronajem-bytu-na-radosti-zlicin' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_59bf4c5214afc71b63141c7d40510172.setContent(html_9fcced933d2244391bfde9fef977602c);
+            
+        
+
+        marker_baaafed6bd8346b991ceae44cb067277.bindPopup(popup_59bf4c5214afc71b63141c7d40510172)
+        ;
+
+        
+    
+    
+            var marker_803611be93cc8d621b8f5cba96324de7 = L.marker(
+                [50.08259, 14.44762],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_efa4de75d2b1d02041ff136a29e6b4a1 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_48b3b9e4a80c3b8429053814aca621cc = $(`<div id="html_48b3b9e4a80c3b8429053814aca621cc" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/789802-nabidka-pronajem-bytu-krasova-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_efa4de75d2b1d02041ff136a29e6b4a1.setContent(html_48b3b9e4a80c3b8429053814aca621cc);
+            
+        
+
+        marker_803611be93cc8d621b8f5cba96324de7.bindPopup(popup_efa4de75d2b1d02041ff136a29e6b4a1)
+        ;
+
+        
+    
+    
+            var marker_d20d75456ea4a3ab4464f49207c45931 = L.marker(
+                [50.00996, 14.40405],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_64c50125f866873696adc5fbd11a2766 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_ef7563ea2f2ac8ff7b2b0de695f22fe6 = $(`<div id="html_ef7563ea2f2ac8ff7b2b0de695f22fe6" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/494253-nabidka-pronajem-bytu-prevoznicka-praha-12' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_64c50125f866873696adc5fbd11a2766.setContent(html_ef7563ea2f2ac8ff7b2b0de695f22fe6);
+            
+        
+
+        marker_d20d75456ea4a3ab4464f49207c45931.bindPopup(popup_64c50125f866873696adc5fbd11a2766)
+        ;
+
+        
+    
+    
+            var marker_227c727cefa45f0c49003c795d636517 = L.marker(
+                [50.08179, 14.41323],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_9ae08cef86e18295f7216a9e771c357d = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_6977f7cecf1f2fa37c32b65080099003 = $(`<div id="html_6977f7cecf1f2fa37c32b65080099003" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/788868-nabidka-pronajem-bytu-smetanovo-nabrezi-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_9ae08cef86e18295f7216a9e771c357d.setContent(html_6977f7cecf1f2fa37c32b65080099003);
+            
+        
+
+        marker_227c727cefa45f0c49003c795d636517.bindPopup(popup_9ae08cef86e18295f7216a9e771c357d)
+        ;
+
+        
+    
+    
+            var marker_76038c8c22cc5f53e4abe6f94f41a7bb = L.marker(
+                [50.07857, 14.2534],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_da5db1dc92053501d3fcd6082d8853c9 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_64965294d6ce2f9bf1f77eb796a1b7c7 = $(`<div id="html_64965294d6ce2f9bf1f77eb796a1b7c7" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/703920-nabidka-pronajem-bytu-kmochova-hostivice' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_da5db1dc92053501d3fcd6082d8853c9.setContent(html_64965294d6ce2f9bf1f77eb796a1b7c7);
+            
+        
+
+        marker_76038c8c22cc5f53e4abe6f94f41a7bb.bindPopup(popup_da5db1dc92053501d3fcd6082d8853c9)
+        ;
+
+        
+    
+    
+            var marker_88be464524a61fd62788eaea25dc411c = L.marker(
+                [50.10432, 14.452],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_96d02709b8db12e6424a6d72fa42173f = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_b425735b30fa35e4f62c32119b46cfc6 = $(`<div id="html_b425735b30fa35e4f62c32119b46cfc6" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/631505-nabidka-pronajem-bytu-pristavni-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_96d02709b8db12e6424a6d72fa42173f.setContent(html_b425735b30fa35e4f62c32119b46cfc6);
+            
+        
+
+        marker_88be464524a61fd62788eaea25dc411c.bindPopup(popup_96d02709b8db12e6424a6d72fa42173f)
+        ;
+
+        
+    
+    
+            var marker_737b2e66996e5b48dd7dcab5c0333be0 = L.marker(
+                [50.12698, 14.50312],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_bd0c39fc92ea404c25cee6221aeb5612 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_97f9b3d4289da1fee8489b46f4a78ee1 = $(`<div id="html_97f9b3d4289da1fee8489b46f4a78ee1" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/652849-nabidka-pronajem-bytu-bechlinska-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_bd0c39fc92ea404c25cee6221aeb5612.setContent(html_97f9b3d4289da1fee8489b46f4a78ee1);
+            
+        
+
+        marker_737b2e66996e5b48dd7dcab5c0333be0.bindPopup(popup_bd0c39fc92ea404c25cee6221aeb5612)
+        ;
+
+        
+    
+    
+            var marker_abb3af5e547d4a11b1d5fb33120b19c4 = L.marker(
+                [49.95494, 14.48187],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_53787a0645dd3ed42dd862d5b9d2f66d = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_fdc741cd41be2fa38777d6d2067b91f0 = $(`<div id="html_fdc741cd41be2fa38777d6d2067b91f0" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/782608-nabidka-pronajem-bytu-k-remizku-zlatniky-hodkovice' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_53787a0645dd3ed42dd862d5b9d2f66d.setContent(html_fdc741cd41be2fa38777d6d2067b91f0);
+            
+        
+
+        marker_abb3af5e547d4a11b1d5fb33120b19c4.bindPopup(popup_53787a0645dd3ed42dd862d5b9d2f66d)
+        ;
+
+        
+    
+    
+            var marker_00eab531fdccde18e0db3d7999ad0573 = L.marker(
+                [50.08504, 14.5135],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_84c21d98ef81bfbd6274316b5afa36df = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_8b23c89cca207f51ff22c5b493290c5b = $(`<div id="html_8b23c89cca207f51ff22c5b493290c5b" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/529247-nabidka-pronajem-bytu-gollova' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_84c21d98ef81bfbd6274316b5afa36df.setContent(html_8b23c89cca207f51ff22c5b493290c5b);
+            
+        
+
+        marker_00eab531fdccde18e0db3d7999ad0573.bindPopup(popup_84c21d98ef81bfbd6274316b5afa36df)
+        ;
+
+        
+    
+    
+            var marker_221f769fecbed0debd5c3f500350d67b = L.marker(
+                [50.08963, 14.44489],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_f7a780beaa3d937ba60a5b9fb2b01e28 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_df457aeb2ce75da950c325fcb6c37cc4 = $(`<div id="html_df457aeb2ce75da950c325fcb6c37cc4" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/401280-nabidka-pronajem-bytu-jirsikova-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_f7a780beaa3d937ba60a5b9fb2b01e28.setContent(html_df457aeb2ce75da950c325fcb6c37cc4);
+            
+        
+
+        marker_221f769fecbed0debd5c3f500350d67b.bindPopup(popup_f7a780beaa3d937ba60a5b9fb2b01e28)
+        ;
+
+        
+    
+    
+            var marker_c59d82511bd46ffc3afbb1d91e7cd99d = L.marker(
+                [50.09208, 14.43036],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_2c6fd673e568b449642f13d9b7cb8b6a = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_2cadb0985f0917f9fa9e313c5dedfd8b = $(`<div id="html_2cadb0985f0917f9fa9e313c5dedfd8b" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/581862-nabidka-pronajem-bytu-klimentska-prague' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_2c6fd673e568b449642f13d9b7cb8b6a.setContent(html_2cadb0985f0917f9fa9e313c5dedfd8b);
+            
+        
+
+        marker_c59d82511bd46ffc3afbb1d91e7cd99d.bindPopup(popup_2c6fd673e568b449642f13d9b7cb8b6a)
+        ;
+
+        
+    
+    
+            var marker_7dce43a855f2656eb6fb615737f97c4e = L.marker(
+                [49.99159, 14.6653],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_8a5a855bafc456d7b834fe709b5eb65e = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_4506f21305d1210911c9721f070c9b02 = $(`<div id="html_4506f21305d1210911c9721f070c9b02" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/786728-nabidka-pronajem-bytu-komenskeho-namesti-ricany' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_8a5a855bafc456d7b834fe709b5eb65e.setContent(html_4506f21305d1210911c9721f070c9b02);
+            
+        
+
+        marker_7dce43a855f2656eb6fb615737f97c4e.bindPopup(popup_8a5a855bafc456d7b834fe709b5eb65e)
+        ;
+
+        
+    
+    
+            var marker_e8aee943a70810e936dee6c1b8f72700 = L.marker(
+                [50.1264, 14.42052],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_3deb620ba1868277119225b96fa84032 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_e37db73de36d7db0802b50eed0bda503 = $(`<div id="html_e37db73de36d7db0802b50eed0bda503" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/206849-nabidka-pronajem-bytu-hnezdenska-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_3deb620ba1868277119225b96fa84032.setContent(html_e37db73de36d7db0802b50eed0bda503);
+            
+        
+
+        marker_e8aee943a70810e936dee6c1b8f72700.bindPopup(popup_3deb620ba1868277119225b96fa84032)
+        ;
+
+        
+    
+    
+            var marker_fc37d9e35a21e0fe3215acc36e10d336 = L.marker(
+                [50.07576, 14.65364],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_34adae7a9916acc99c149f88ad9d9d15 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_4ebc38820728f70fcbbbb9fc973d7f32 = $(`<div id="html_4ebc38820728f70fcbbbb9fc973d7f32" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/788112-nabidka-pronajem-bytu-raposovska-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_34adae7a9916acc99c149f88ad9d9d15.setContent(html_4ebc38820728f70fcbbbb9fc973d7f32);
+            
+        
+
+        marker_fc37d9e35a21e0fe3215acc36e10d336.bindPopup(popup_34adae7a9916acc99c149f88ad9d9d15)
+        ;
+
+        
+    
+    
+            var marker_a20d54acb596917ab8747d209e66b7f1 = L.marker(
+                [50.02104, 14.51982],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_e1c9edc3a287a9bee565c00c870be403 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_331c2469d9d3312983cf80534c39c82d = $(`<div id="html_331c2469d9d3312983cf80534c39c82d" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/485526-nabidka-pronajem-bytu-formanska-praha-ujezd' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_e1c9edc3a287a9bee565c00c870be403.setContent(html_331c2469d9d3312983cf80534c39c82d);
+            
+        
+
+        marker_a20d54acb596917ab8747d209e66b7f1.bindPopup(popup_e1c9edc3a287a9bee565c00c870be403)
+        ;
+
+        
+    
+    
+            var marker_752a24d158d11392fa7cc7846e2e6dc8 = L.marker(
+                [50.06367, 14.36827],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_f2671e13f3304dcc0711420c9ab91499 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_f6b2b3833d7ed095cb99cf30cc199e70 = $(`<div id="html_f6b2b3833d7ed095cb99cf30cc199e70" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/781500-nabidka-pronajem-bytu-smolikova-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_f2671e13f3304dcc0711420c9ab91499.setContent(html_f6b2b3833d7ed095cb99cf30cc199e70);
+            
+        
+
+        marker_752a24d158d11392fa7cc7846e2e6dc8.bindPopup(popup_f2671e13f3304dcc0711420c9ab91499)
+        ;
+
+        
+    
+    
+            var marker_f307c47375370a220f48e72f25bcfa5a = L.marker(
+                [50.0571, 14.48411],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_2ffc9802b42fa45a7faa0a69d8cd73eb = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_d60b667fc0b7bcf3daef3d060562fe5f = $(`<div id="html_d60b667fc0b7bcf3daef3d060562fe5f" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/782103-nabidka-pronajem-bytu-u-vinne-revy-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_2ffc9802b42fa45a7faa0a69d8cd73eb.setContent(html_d60b667fc0b7bcf3daef3d060562fe5f);
+            
+        
+
+        marker_f307c47375370a220f48e72f25bcfa5a.bindPopup(popup_2ffc9802b42fa45a7faa0a69d8cd73eb)
+        ;
+
+        
+    
+    
+            var marker_4528164972f1820a7b81dd5d974ac62e = L.marker(
+                [50.08456, 14.44802],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_edfca1e3f8145b33d7e68091d76db31f = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_aab127722f891fa65b632b07b365a813 = $(`<div id="html_aab127722f891fa65b632b07b365a813" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/786492-nabidka-pronajem-bytu-seifertova-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_edfca1e3f8145b33d7e68091d76db31f.setContent(html_aab127722f891fa65b632b07b365a813);
+            
+        
+
+        marker_4528164972f1820a7b81dd5d974ac62e.bindPopup(popup_edfca1e3f8145b33d7e68091d76db31f)
+        ;
+
+        
+    
+    
+            var marker_9b12544fcab49ef65b4d47e0d7b4371e = L.marker(
+                [50.03492, 14.32108],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_c7f1a532f74e9a66ee3e2a97d3641a6e = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_f74a038bf42503d7fc1b7fd07a3c7f59 = $(`<div id="html_f74a038bf42503d7fc1b7fd07a3c7f59" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/212860-nabidka-pronajem-bytu-zilovska' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_c7f1a532f74e9a66ee3e2a97d3641a6e.setContent(html_f74a038bf42503d7fc1b7fd07a3c7f59);
+            
+        
+
+        marker_9b12544fcab49ef65b4d47e0d7b4371e.bindPopup(popup_c7f1a532f74e9a66ee3e2a97d3641a6e)
+        ;
+
+        
+    
+    
+            var marker_94c333eb9f6894ffc1224cbd84fa6b08 = L.marker(
+                [50.0685, 14.3879],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_e26154524416255149c8a19f6055fe66 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_fb4b7678026f5e7adf43016e1e80887d = $(`<div id="html_fb4b7678026f5e7adf43016e1e80887d" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/748855-nabidka-pronajem-bytu-nad-popelkou-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_e26154524416255149c8a19f6055fe66.setContent(html_fb4b7678026f5e7adf43016e1e80887d);
+            
+        
+
+        marker_94c333eb9f6894ffc1224cbd84fa6b08.bindPopup(popup_e26154524416255149c8a19f6055fe66)
+        ;
+
+        
+    
+    
+            var marker_1f60849f40195319a5b814a8e4d084b7 = L.marker(
+                [50.04423, 14.40009],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_0d01b8beb937286a2803c6e9a82b401b = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_d41274e48576aee305e51e8532f57597 = $(`<div id="html_d41274e48576aee305e51e8532f57597" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/712900-nabidka-pronajem-bytu-zvahovska-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_0d01b8beb937286a2803c6e9a82b401b.setContent(html_d41274e48576aee305e51e8532f57597);
+            
+        
+
+        marker_1f60849f40195319a5b814a8e4d084b7.bindPopup(popup_0d01b8beb937286a2803c6e9a82b401b)
+        ;
+
+        
+    
+    
+            var marker_e0ec5f0b0a0011c4195a58e5db2a337c = L.marker(
+                [50.04747, 14.52054],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_8c24eb4ac3052952d82214150d9f242a = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_ddc666f965d34dec35421604daeaa045 = $(`<div id="html_ddc666f965d34dec35421604daeaa045" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/782975-nabidka-pronajem-bytu-vajdova-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_8c24eb4ac3052952d82214150d9f242a.setContent(html_ddc666f965d34dec35421604daeaa045);
+            
+        
+
+        marker_e0ec5f0b0a0011c4195a58e5db2a337c.bindPopup(popup_8c24eb4ac3052952d82214150d9f242a)
+        ;
+
+        
+    
+    
+            var marker_efa4837e4464c2fba45f954267a8adbb = L.marker(
+                [50.05185, 14.34899],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_bbb30db1f44b6b7d00c4dce889feb893 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_181114c930aa69e677b62124d1fc2a05 = $(`<div id="html_181114c930aa69e677b62124d1fc2a05" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/782350-nabidka-pronajem-bytu-nuslova-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_bbb30db1f44b6b7d00c4dce889feb893.setContent(html_181114c930aa69e677b62124d1fc2a05);
+            
+        
+
+        marker_efa4837e4464c2fba45f954267a8adbb.bindPopup(popup_bbb30db1f44b6b7d00c4dce889feb893)
+        ;
+
+        
+    
+    
+            var marker_d0131102c9a8ceef30d623915c2719e4 = L.marker(
+                [50.03952, 14.33978],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_4c13842f976d7978ab3673141985d8ea = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_a87677fe45757d46e60646e422b44008 = $(`<div id="html_a87677fe45757d46e60646e422b44008" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/778525-nabidka-pronajem-bytu-janskeho-hlavni-mesto-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_4c13842f976d7978ab3673141985d8ea.setContent(html_a87677fe45757d46e60646e422b44008);
+            
+        
+
+        marker_d0131102c9a8ceef30d623915c2719e4.bindPopup(popup_4c13842f976d7978ab3673141985d8ea)
+        ;
+
+        
+    
+    
+            var marker_99d657f15ecb6410c3567836e657b96c = L.marker(
+                [50.06673, 14.39622],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_14aeedaeeccc20297b9600f2bd5c4e57 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_1a009e9621524429ebaf3f648b1a659f = $(`<div id="html_1a009e9621524429ebaf3f648b1a659f" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/191528-nabidka-pronajem-bytu-u-nikolajky' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_14aeedaeeccc20297b9600f2bd5c4e57.setContent(html_1a009e9621524429ebaf3f648b1a659f);
+            
+        
+
+        marker_99d657f15ecb6410c3567836e657b96c.bindPopup(popup_14aeedaeeccc20297b9600f2bd5c4e57)
+        ;
+
+        
+    
+    
+            var marker_4c037b2c53028c8706be21fb31935927 = L.marker(
+                [50.06394, 14.64603],
+                {}
+            ).addTo(map_a477bd3ea7c189758522965eb6c9e523);
+        
+    
+        var popup_26b0661dccde6c3ee993a2fdb68168cb = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_0a1c50bfb7e12d506be582b0392f677e = $(`<div id="html_0a1c50bfb7e12d506be582b0392f677e" style="width: 100.0%; height: 100.0%;"><a href='https://www.bezrealitky.cz/nemovitosti-byty-domy/566827-nabidka-pronajem-bytu-savojska-praha' target='_blank'> Click here for more details</a></div>`)[0];
+                popup_26b0661dccde6c3ee993a2fdb68168cb.setContent(html_0a1c50bfb7e12d506be582b0392f677e);
+            
+        
+
+        marker_4c037b2c53028c8706be21fb31935927.bindPopup(popup_26b0661dccde6c3ee993a2fdb68168cb)
+        ;
+
+        
+    
+</script>
+</html>
